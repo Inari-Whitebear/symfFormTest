@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StatusController!{% endblock %}
+
+{% block _status_list_statusList_entry_row %}
+    <div>
+        {{ form_row(form.name) }}
+    </div>
+{% endblock %}
+
+{% form_theme form _self %}
+
+{% block body %}
+    {{ form_start(form) }}
+        {{ form_row(form.statusList) }}
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+{% endblock %}
